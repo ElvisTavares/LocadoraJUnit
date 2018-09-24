@@ -29,6 +29,10 @@ public class Cliente {
 		if(!nome.matches("[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃçÇ ]+")){
 			throw new ClienteException("Números e símbolos não são permitidos");
 		}
+                String[] n = nome.split(" ");
+                if (n == null){
+                    throw new ClienteException("Nome não possui espaço entre o nome e sobrenome!");
+                }
 	}
 
 	@Override
