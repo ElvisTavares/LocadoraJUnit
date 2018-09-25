@@ -19,7 +19,7 @@ public class ClienteTest {
             c.setNome("Rafael");
             Assert.fail("Aceitou o nome sem sobrenome.");
         } catch (ClienteException ex) {
-            Assert.assertThat(ex.getMessage(), is("É preciso o nome e sobrenome!"));
+            Assert.assertThat(ex.getMessage(), is("Nome não possui espaço entre o nome e sobrenome!"));
         }
 
     }
