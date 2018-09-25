@@ -27,12 +27,7 @@ public class ClienteTest {
     @Test
     public void nomeNaoDeveConterEspacoNoInicioFim() {
         Cliente c = new Cliente();
-        try {
-            c.setNome(" Rafael Calearo ");
-            Assert.fail("Aceitou o nome com espaço no inicio e no fim.");
-        } catch (ClienteException ex) {
-            Assert.assertThat(ex.getMessage(), is("É preciso um nome sem espaço no inicio e no fim!"));
-        }
-
+        c.setNome(" Rafael Calearo ");
+        Assert.assertThat(c.getNome(), is("Rafael Calearo"));
     }
 }
