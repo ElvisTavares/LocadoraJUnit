@@ -33,6 +33,9 @@ public class Cliente {
                 if (!nome.contains(" ")){
                     throw new ClienteException("Nome não possui espaço entre o nome e sobrenome!");
                 }
+                this.nome = nome.trim();
+                
+                
 	}
 
 	@Override
